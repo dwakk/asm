@@ -1,7 +1,7 @@
 NASM = nasm
 NASM_FLAGS = -f elf64
 CC = gcc
-CFLAGS = 
+CFLAGS = -Wno-builtin-declaration-mismatch
 SRC_DIR = ./src
 OBJ_DIR = ./obj
 BIN_DIR = ./bin

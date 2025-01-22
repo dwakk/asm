@@ -1,10 +1,9 @@
-;we will not use format specifiers for now
-
 section .text
-    global printf
+    global puts
 
-printf:
+puts:
     xor rbx, rbx
+    mov rcx, 10
 
 .loop_string:
     cmp byte [rdi + rbx], 0
@@ -20,4 +19,13 @@ printf:
     mov rdx, rbx
     syscall
 
+    mov rax, 1
+    mov rdi, 1
+    lea rsi, [rel newline]
+    mov rdx, 1
+    syscall
+
     ret
+
+section .text
+newline db 10
