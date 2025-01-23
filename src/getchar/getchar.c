@@ -4,7 +4,8 @@
 
 extern int getchar(void);
 
-int main() {
+int main()
+{
     int ch = getchar();
     printf("%c\n", ch);
     return 0;

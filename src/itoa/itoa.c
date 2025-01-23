@@ -5,9 +5,11 @@
 
 extern void itoa(long num, char *buffer);
 
-int main() {
+int main()
+{
+    long num = -123;
     char buffer[20];
-    itoa(-123, buffer); //assuming the buffer is lage enough and the base is 10
+    itoa(num, buffer); //assuming the buffer is lage enough and the base is 10
     printf("%s\n", buffer);
     return 0;
 }

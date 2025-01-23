@@ -2,10 +2,12 @@
 
 #include <stdio.h>
 
-extern long atoi(char *str);
+extern long atoi(const char *str);
 
-int main() {
-    long num = atoi("-12"); //assuming the base is 10
+int main()
+{
+    const char* str = "-12";
+    long num = atoi(str); //assuming the base is 10
     printf("%ld\n", num);
     return 0;
 }

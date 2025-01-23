@@ -2,7 +2,8 @@
 
 extern int puts(const char *str);
 
-int main() {
+int main()
+{
     //returns the number of characters printed to the console
     int num = puts("Hello, world");
     return 0;

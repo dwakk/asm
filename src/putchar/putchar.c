@@ -2,7 +2,9 @@
 
 extern int putchar(int ch);
 
-int main() {
-    int ret = putchar('C');
+int main()
+{
+    int ch = 'C';
+    int ret = putchar(ch);
     return 0;
 }
