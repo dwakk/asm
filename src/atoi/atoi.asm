@@ -14,6 +14,12 @@ atoi:
     cmp al, 45
     je .handle_negative
 
+    cmp al, 48
+    jl .invalid
+
+    cmp al, 57
+    jg .invalid
+
     sub al, 48
     imul rdx, rdx, 10
     add rdx, rax
@@ -34,4 +40,8 @@ atoi:
     neg rax
 
 .return:
+    ret
+
+.invalid:
+    xor rax, rax
     ret
