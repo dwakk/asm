@@ -25,6 +25,8 @@ puts:
     mov rdx, 1
     syscall
 
+    mov rax, rbx
+
     ret
 
 section .text
